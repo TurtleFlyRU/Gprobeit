@@ -1,4 +1,4 @@
-# probeit
+# Gprobeit
 ProbeIt -  G code generator for scanning a workpiece plane. Batch script for Windows and NCStudio.
 
 probeit.bat - этот скрипт, в диалоговом режиме, создает файл с G кодом для сканирования плоскости заготовки
