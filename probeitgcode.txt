@@ -1,0 +1,132 @@
+(G code generated 10.01.2020 23:11:20,25)
+(BATCH script Gprobeit v.2020.01.10)
+(turtlefly@yandex.ru)
+(X=20)
+(Y=20)
+(XY offset=1)
+(Z safe=3)
+(Z zdepth=3)
+(Measurement size=6)
+(Xsection 4)
+(Ysection 4)
+(All section 16)
+G17; 
+G21; 
+G90;
+M05;
+(Start Surface Scan)
+G0 Z3;
+G0 X1Y1; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X6Y1; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X12Y1; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X18Y1; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X23Y1; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X1Y6; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X6Y6; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X12Y6; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X18Y6; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X23Y6; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X1Y12; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X6Y12; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X12Y12; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X18Y12; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X23Y12; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X1Y18; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X6Y18; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X12Y18; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X18Y18; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X23Y18; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X1Y23; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X6Y23; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X12Y23; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X18Y23; 
+G65 P"TEST-Z";
+G04 P2000;
+G0 Z3;
+G0 X23Y23; 
+G65 P"TEST-Z";
+G04 P2000;
+(End Surface Scan)
+M02;
+'##### Workpiece height measurement procedure #####
+O"TEST-Z";
+M802 P196609 
+M801 MSG"|D|Waiting for a workpiece touch signal";
+G904 FZ=-#CALIBRATION_SPEED*60 PZ=#CALIBRATION_SW LZ1;
+G904 FZ=#CALIBRATION_SPEED*6 PZ=#CALIBRATION_SW LZ0;
+M801 MSG",{#CURWORKPOS.X},{#CURWORKPOS.Y},{#CURWORKPOS.Z}";
+G91 G01 Z0.1;
+G04 P1000;
+G906;
+G90;
+M17;
+'#################################################
