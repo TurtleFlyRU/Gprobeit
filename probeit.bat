@@ -6,13 +6,16 @@ set probefilename=probeitgcode.txt
 rem Очистка текстового файла вывода
 break >%probefilename%
 echo (G code generated %DATE% %TIME%)>>%probefilename%
-echo (BATCH script Probeit v.2020.01.07)>>%probefilename%
+echo (BATCH script Gprobeit v.2020.01.10)>>%probefilename%
 echo (turtlefly@yandex.ru)>>%probefilename%
 
 rem Запрос о формате генерации
 set /p format="G-code format: 1-w/o variables, 2-with variables: "
 rem >> is add to file, but > is write file
 rem echo (G-code format=%format%)>>%probefilename%
+IF /I %format% == 2 (
+set format=1
+)
 
 set /p xsize="Enter the size of the workpiece along the X axis (mm): "
 rem echo Size workpiece along the X is - %xsize%
