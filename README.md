@@ -1,7 +1,7 @@
 # Gprobeit
 Gprobeit -  G code generator for scanning a workpiece plane. Batch script for Windows and NCStudio.
 
-probeit.bat - этот скрипт, в диалоговом режиме, создает файл с G кодом для сканирования плоскости заготовки
+gprobeit.bat - этот скрипт, в диалоговом режиме, создает файл с G кодом для сканирования плоскости заготовки
 на портальном фрезере под управлением NCStudio.
 
 log_parser.bat - этот скрипт копирует данные замеров из лог-файла NcStudio.log в новый файл, в формате подходящем для дальнейшей работы 
